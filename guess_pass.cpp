@@ -201,7 +201,7 @@ void parse_args(int &argc, const char **argv) {
                 }
                 break;
             default:
-                std::cerr << "usage: " << argv[0] << " MD5-hashed-password [min-pass-length] [max-pass-length]\n";
+                std::cerr << "usage: " << argv[0] << " MD5-hashed-password [threshold] [min-pass-length] [max-pass-length]\n";
                 exit(2);
         }
     }
