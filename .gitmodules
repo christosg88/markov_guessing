@@ -1,0 +1,3 @@
+[submodule "CryptLib"]
+	path = CryptLib
+	url = https://github.com/WaterJuice/CryptLib.git

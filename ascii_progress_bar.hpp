@@ -1,5 +1,5 @@
 #ifndef ASCII_PROGRESS_BAR_H
-#define    ASCII_PROGRESS_BAR_H
+#define ASCII_PROGRESS_BAR_H
 
 typedef uint64_t u64;
 
