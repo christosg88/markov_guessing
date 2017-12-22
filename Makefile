@@ -17,7 +17,7 @@ guess_pass: guess_pass.o CryptLib_Md5.o
 gen_markov_matrices.o: gen_markov_matrices.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ gen_markov_matrices.cpp
 
-guess_pass.o: guess_pass.cpp $(LIBDIR)/CryptLib_Md5.h ascii_progress_bar.hpp
+guess_pass.o: guess_pass.cpp guess_pass.hpp $(LIBDIR)/CryptLib_Md5.h ascii_progress_bar.hpp
 	$(CXX) $(CXXFLAGS) -c -o $@ guess_pass.cpp
 
 CryptLib_Md5.o: $(LIBDIR)/CryptLib_Md5.c $(LIBDIR)/CryptLib_Md5.h

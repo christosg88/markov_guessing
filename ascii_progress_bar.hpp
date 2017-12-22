@@ -50,7 +50,7 @@ public:
         draw();
     }
 
-    explicit ascii_progress_bar(const u64 max_value, const int cols = DEFAULT_COLS) :
+    explicit ascii_progress_bar(const u64 max_value, const unsigned cols = DEFAULT_COLS) :
             num_cols(cols),
             max_value(max_value),
             current_value(0),
