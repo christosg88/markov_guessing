@@ -9,7 +9,12 @@ const size_t char_space_len = char_space_end - char_space_start + 1;
 
 typedef uint32_t u32;
 
-int main() {
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        std::cerr << "usage: " << argv[0] << " <wordlist>\n";
+        return 1;
+    }
+
     // 3D matrix that holds the frequencies of occurrence at
     // [place_in_pass][previous_char][current_char]
     u32 markov[max_pass_len][char_space_len][char_space_len] = {0};
@@ -17,10 +22,10 @@ int main() {
     std::cout << "Reading Dictionary...\n";
 
     // Open input file stream for reading
-    std::ifstream infile("rockyou.txt", std::ios::in | std::ios::binary);
+    std::ifstream infile(argv[1], std::ios::in | std::ios::binary);
     if (!infile) {
-        std::cerr << "Couldn't open rockyou.txt for reading. Terminating...\n";
-        return 1;
+        std::cerr << "Couldn't open " << argv[1] << " for reading. Terminating...\n";
+        return 2;
     }
 
     // Buffer to store read line
@@ -56,7 +61,7 @@ int main() {
     std::ofstream outfile("markov.dat", std::ios::binary | std::ios::out);
     if (!outfile) {
         std::cerr << "Couldn't open markov.dat for writing. Terminating...\n";
-        return 2;
+        return 3;
     }
     outfile.write(reinterpret_cast<char *>(markov), max_pass_len * char_space_len * char_space_len * sizeof(u32));
 
