@@ -1,12 +1,3 @@
-[submodule "includes/WjCryptLib"]
-	path = includes/WjCryptLib
-	url = https://github.com/WaterJuice/WjCryptLib.git
 [submodule "inc/WjCryptLib"]
 	path = inc/WjCryptLib
 	url = https://github.com/WaterJuice/WjCryptLib.git
-[submodule "doc"]
-	path = doc
-	url = https://git.overleaf.com/12921375nsbjnghtvzjj
-[submodule "presentation"]
-	path = presentation
-	url = https://git.overleaf.com/13151167ymhfxwhmrmhs
