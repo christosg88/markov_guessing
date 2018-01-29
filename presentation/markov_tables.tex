@@ -1,0 +1,379 @@
+\begin{frame}{Παράδειγμα}
+    \only<1> {
+        \begin{block}{Βήμα 0: Αρχικοποίηση}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<2> {
+        \begin{block}{Βήμα 1: ace}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    \textcolor{red}{1} & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & \textcolor{red}{1} & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & \textcolor{red}{1} \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<3> {
+        \begin{block}{Βήμα 2: add}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    \textcolor{red}{2} & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 1 & \textcolor{red}{1} & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & \textcolor{red}{1} & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<4> {
+        \begin{block}{Βήμα 3: bad}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    2 & \textcolor{red}{1} & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 1 & 1 & 0 \\
+                    \textcolor{red}{1} & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & \textcolor{red}{1} & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<5> {
+        \begin{block}{Βήμα 4: bed}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    2 & \textcolor{red}{2} & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 1 & 1 & 0 \\
+                    1 & 0 & 0 & 0 & \textcolor{red}{1} \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & \textcolor{red}{1} & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<6> {
+        \begin{block}{Βήμα 5: bee}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    2 & \textcolor{red}{3} & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 1 & 1 & 0 \\
+                    1 & 0 & 0 & 0 & \textcolor{red}{2} \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 1 & \textcolor{red}{1} \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<7> {
+        \begin{block}{Βήμα 6: cab}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    2 & 3 & \textcolor{red}{1} & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 1 & 1 & 0 \\
+                    1 & 0 & 0 & 0 & 2 \\
+                    \textcolor{red}{1} & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & \textcolor{red}{1} & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 1 & 1 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<8> {
+        \begin{block}{Βήμα 7: dad}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    2 & 3 & 1 & \textcolor{red}{1} & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 1 & 1 & 0 \\
+                    1 & 0 & 0 & 0 & 2 \\
+                    1 & 0 & 0 & 0 & 0 \\
+                    \textcolor{red}{1} & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 1 & 0 & \textcolor{red}{2} & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 1 & 1 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+
+    \only<9> {
+        \begin{block}{Βήμα 8: dead}
+            \begin{TAB}(c){cccc}{cc}
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    2 & 3 & 1 & \textcolor{red}{2} & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 1 & 1 & 0 \\
+                    1 & 0 & 0 & 0 & 2 \\
+                    1 & 0 & 0 & 0 & 0 \\
+                    1 & 0 & 0 & 0 & \textcolor{red}{1} \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 1 & 0 & 2 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & 1 & 0 \\
+                    \textcolor{red}{1} & 0 & 0 & 1 & 1 \\
+                \end{TAB}
+                &
+                \begin{TAB}(e)[3pt]{|c:c:c:c:c|}{|c:c:c:c:c|}
+                    0 & 0 & 0 & \textcolor{red}{1} & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 \\
+                \end{TAB}
+
+                \\
+
+                markov[$0$] & markov[$1$] & markov[$2$] & markov[$3$]
+            \end{TAB}
+        \end{block}
+    }
+\end{frame}

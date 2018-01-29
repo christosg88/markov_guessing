@@ -7,7 +7,7 @@ The project doesn't try to achieve best performance or generalized use with othe
 The project was researched in depth and an informative and explanatory report (in Greek) can be found [here](https://github.com/christosg88/markov_guessing/blob/master/doc/markov_guessing.pdf).
 
 # Presentation
-Also a short presentation (in Greek) was made and it can be found [here](https://github.com/christosg88/markov_guessing/blob/master/presentation/markov_guessing.pdf)
+Also a short presentation (in Greek) was made and it can be found [here](https://github.com/christosg88/markov_guessing/blob/master/presentation/markov_guessing.pdf).
 
 ## Get the project
 To get the project, open the terminal, go to the directory where you want to place the project, and do the following:
