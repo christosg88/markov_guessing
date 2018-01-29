@@ -8,7 +8,9 @@
 #include <cstring>
 #include <cmath>
 
-#include "CryptLib/lib/CryptLib_Md5.h"
+extern "C" {
+    #include "WjCryptLib_Md5.h"
+};
 #include "ascii_progress_bar.hpp"
 
 typedef uint32_t u32;
@@ -53,8 +55,6 @@ public:
     }
 
     std::string guess_markov_chains() const;
-
-    std::string guess_bruteforce() const;
 };
 
 std::string
@@ -97,8 +97,8 @@ guess_pass::guess_markov_chains() const {
 
     // Try to guess the password
     char pass[max_pass_len + 1];
-    Md5Context md5_context;
-    MD5_HASH md5_hash;
+    Md5Context md5_context{};
+    MD5_HASH md5_hash{};
     for (u32 pass_len = min_pass_len; pass_len <= max_pass_len; ++pass_len) {
         std::cout << "testing length: " << pass_len << "\n";
         ascii_progress_bar bar(static_cast<u64>(std::pow(threshold, pass_len)), 100);
@@ -141,51 +141,6 @@ guess_pass::guess_markov_chains() const {
             }
             for (u32 up = pos; up < pass_len; ++up) {
                 *(pass+up) = pairs[up][*(pass+up-1) - char_space_start][cnt[up]].first;
-            }
-        }
-        finished:;
-        bar.finish();
-    }
-    return std::string();
-}
-
-std::string
-guess_pass::guess_bruteforce() const {
-    std::cout << "Starting Password Guessing...\n";
-
-    // Try to guess the password
-    char pass[max_pass_len + 1];
-    Md5Context md5_context;
-    MD5_HASH md5_hash;
-    for (u32 pass_len = min_pass_len; pass_len <= max_pass_len; ++pass_len) {
-        std::cout << "testing length: " << pass_len << "\n";
-        ascii_progress_bar bar(static_cast<u64>(std::pow(char_space_len, pass_len)), 100);
-
-        // Terminate the string
-        *(pass+pass_len) = '\0';
-
-        for (u32 pos = 0; pos < pass_len; ++pos) {
-            *(pass+pos) = char_space_start;
-        }
-
-        while (true) {
-            bar.progress();
-            Md5Initialise(&md5_context);
-            Md5Update(&md5_context, pass, pass_len);
-            Md5Finalise(&md5_context, &md5_hash);
-
-            if (check_password(hashed, md5_hash.bytes)) {
-                bar.stop();
-                return std::string(pass);
-            }
-
-            u32 pos = pass_len - 1;
-            while (++pass[pos] == char_space_end) {
-                if (pos == 0)
-                    goto finished;
-
-                pass[pos] = char_space_start;
-                pos--;
             }
         }
         finished:;

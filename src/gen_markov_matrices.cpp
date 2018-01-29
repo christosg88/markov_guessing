@@ -24,7 +24,8 @@ int main(int argc, char *argv[]) {
     // Open input file stream for reading
     std::ifstream infile(argv[1], std::ios::in | std::ios::binary);
     if (!infile) {
-        std::cerr << "Couldn't open " << argv[1] << " for reading. Terminating...\n";
+        std::cerr << "Couldn't open " << argv[1]
+                  << " for reading. Terminating...\n";
         return 2;
     }
 
@@ -50,7 +51,7 @@ int main(int argc, char *argv[]) {
         markov[0][0][(*buffer) - char_space_start]++;
         unsigned cnt_markov = 1;
         for (char *c = buffer + 1; *c && cnt_markov < max_pass_len; ++c, ++cnt_markov) {
-            markov[cnt_markov][*(c-1) - char_space_start][*(c) - char_space_start]++;
+            markov[cnt_markov][*(c - 1) - char_space_start][*(c) - char_space_start]++;
         }
     }
 
@@ -63,7 +64,8 @@ int main(int argc, char *argv[]) {
         std::cerr << "Couldn't open markov.dat for writing. Terminating...\n";
         return 3;
     }
-    outfile.write(reinterpret_cast<char *>(markov), max_pass_len * char_space_len * char_space_len * sizeof(u32));
+    outfile.write(reinterpret_cast<char *>(markov),
+                  max_pass_len * char_space_len * char_space_len * sizeof(u32));
 
     return 0;
 }

@@ -1,3 +1,6 @@
-[submodule "CryptLib"]
-	path = CryptLib
-	url = https://github.com/WaterJuice/CryptLib.git
+[submodule "includes/WjCryptLib"]
+	path = includes/WjCryptLib
+	url = https://github.com/WaterJuice/WjCryptLib.git
+[submodule "inc/WjCryptLib"]
+	path = inc/WjCryptLib
+	url = https://github.com/WaterJuice/WjCryptLib.git

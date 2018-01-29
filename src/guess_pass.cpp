@@ -12,9 +12,8 @@ int main(int argc, const char **argv) {
     // Crete a guess_pass object to guess the password
     guess_pass gp(hashed, min_pass_len, max_pass_len, threshold);
 
-    // Invoke one of the two guessers, guess_markov_chains() or guess_bruteforce()
+    // Invoke the Markov chains guesser
     std::string pass = gp.guess_markov_chains();
-//    std::string pass = gp.guess_bruteforce();
     if (pass.length()) {
         std::cout << "Password found: " << pass << "\n";
     }
